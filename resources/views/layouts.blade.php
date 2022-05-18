@@ -60,7 +60,7 @@
               <a class="nav-link  menuItem" aria-current="page" href="#client">Our Clients</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active menuItem" aria-current="page" href="overview.html">Company
+                <a class="nav-link active menuItem" aria-current="page" href="overview.html">Machine
                     Overview</a>
             </li>
             <li class="nav-item">

@@ -14,11 +14,11 @@
         <h1 class="overviewTitle text-center mb-5">Machine's Overview</h1>
         <div class="container overview">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+                {{-- <div class="col-lg-4 col-md-6">
                     <img src="{{asset('frontend/1.jpeg')}}" class="mb-3" width="100%" alt="">
-                </div>
+                </div> --}}
 
-                <div class="col-lg-8 col-md-6">
+                <div class="col-lg-12 col-md-6">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
@@ -30,9 +30,20 @@
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
-                                    accordion body.</div>
+                                
+                                <div class="accordion-body d-flex">
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="{{asset('frontend/1.jpeg')}}" target="blank">
+                                            <img src="{{asset('frontend/1.jpeg')}}" class="mb-3" width="100%" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-8 col-md-6" style="padding: 1%">
+                                        Placeholder content for this accordion, which is intended to
+                                        demonstrate the <code>.accordion -flush</code> class. This is the first item's
+                                        accordion body.
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -45,9 +56,17 @@
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
-                                    accordion body. Let's imagine this being filled with some actual content.</div>
+                                <div class="accordion-body d-flex">
+                                    <div class="col-lg-4 col-md-6">
+                                        <img src="{{asset('frontend/slider/11.jpg')}}" class="mb-3" width="100%" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6" style="padding: 1%">
+                                        Placeholder content for this accordion, which is intended to
+                                        demonstrate the <code>.accordion -flush</code> class. This is the first item's
+                                        accordion body.
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                         <div class="accordion-item">

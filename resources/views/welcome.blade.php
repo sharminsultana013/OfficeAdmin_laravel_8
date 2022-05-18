@@ -27,7 +27,7 @@
       <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#"
           style="padding-left: 2em; font-size: 30px; color: white;"><span>U</span>nitech<span>L</span>abel</a> -->
-        <a class="navbar-brand" href="#" style="padding-left: 3em; ">
+        <a class="navbar-brand" href="{{route('/')}}" style="padding-left: 3em; ">
           <img src="{{asset('frontend/logo/logo.png')}}" style="width:90px; height:50px" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 10%;">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active menuItem" aria-current="page" href="#">Home</a>
+              <a class="nav-link active menuItem" aria-current="page" href="{{route('/')}}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link  menuItem" aria-current="page" href="#about">About Us</a>
@@ -77,7 +77,7 @@
               <a class="nav-link  menuItem" aria-current="page" href="#client">Our Clients</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active menuItem" aria-current="page" href="{{route('overview')}}">Company
+                <a class="nav-link active menuItem" aria-current="page" href="{{route('overview')}}">Machine
                     Overview</a>
             </li>
             <li class="nav-item">
