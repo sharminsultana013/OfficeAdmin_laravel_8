@@ -17,14 +17,14 @@
                                 class="col-sm-3 text-end control-label col-form-label">Title</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="title" name="title"
-                                    placeholder="About Title here">
+                                    placeholder="About Title here" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="cono1" class="col-sm-3 text-end control-label col-form-label"
                                 place>Description</label>
                             <div class="col-sm-9">
-                                <textarea type="text" class="form-control" id="description" name="description"></textarea>
+                                <textarea type="text" class="form-control" id="description" name="description" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -35,6 +35,13 @@
                             </div>
                         </div>
                     </div>
+
+                    {{-- error validation --}}
+                    @foreach($errors->all() as $error)
+                        <p class="ml-1 h4" style="color: red">{{$error}}</p>
+                    @endforeach
+                    {{-- error validation --}}
+
                     <div class="border-top">
                         <div class="card-body">
                             <button name="submit" type="submit" class="btn btn-primary">Submit</button>

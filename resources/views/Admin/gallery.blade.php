@@ -6,20 +6,26 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <form action="{{route('insert_about')}}" method="post" class="form-horizontal" class="dropzone" enctype="multipart/form-data">
+                <form action="{{route('insert_image')}}" method="post" class="form-horizontal" class="dropzone" enctype="multipart/form-data">
                     @csrf
 
 
                     <div class="card-body">
                         <h4 class="card-title">Add New Image for The Gallery</h4>
                         <div class="form-group row">
-                            {{-- <label for="lname"
-                                class="col-sm-3 text-end control-label col-form-label"></label> --}}
+                            
                             <div class="col-sm-9">
                                 <input type="file" class="form-control" id="image" name="image"/>
                             </div>
                         </div>
                     </div>
+
+                    {{-- error validation --}}
+                    @foreach($errors->all() as $error)
+                        <p class="ml-1 h4" style="color: red">{{$error}}</p>
+                    @endforeach
+                    {{-- error validation --}}
+                                        
                     <div class="border-top">
                         <div class="card-body">
                             <button name="submit" type="submit" class="btn btn-primary">Submit</button>

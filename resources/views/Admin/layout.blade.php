@@ -101,9 +101,9 @@
                                             class="fas fa-list-alt"></i><span class="hide-menu"> Add/Manage
                                             Services
                                         </span></a></li>
-                                <li class="sidebar-item"><a href="{{route('serviceEdit')}}" class="sidebar-link"><i
+                                {{-- <li class="sidebar-item"><a href="{{route('serviceEdit')}}" class="sidebar-link"><i
                                             class="fas fa-list-alt"></i><span class="hide-menu"> Update Services
-                                        </span></a></li>
+                                        </span></a></li> --}}
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -126,8 +126,8 @@
                                         </span></a></li>
                             </ul>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="contact.html" aria-expanded="false"><i class="fas fa-image"></i><span
-                                    class="hide-menu">Messages From Clients</span></a></li>
+                                href="{{route('messageToClient')}}" aria-expanded="false"><i class="fas fa-image"></i><span
+                                    class="hide-menu">Messages For Clients</span></a></li>
                         </li>
                     </ul>
                 </nav>

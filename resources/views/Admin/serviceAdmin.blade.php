@@ -9,7 +9,6 @@
                     <form action="{{route('insert_service')}}" method="post" class="form-horizontal" class="dropzone" enctype="multipart/form-data">
                         @csrf
     
-    
                        
                         <div class="card-body">
                             <h4 class="card-title">Add New Service Information</h4>
@@ -18,14 +17,14 @@
                                     class="col-sm-3 text-end control-label col-form-label">Title</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="title" name="title"
-                                        placeholder="About Title here">
+                                        placeholder="About Title here" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="cono1" class="col-sm-3 text-end control-label col-form-label"
                                     place>Description</label>
                                 <div class="col-sm-9">
-                                    <textarea type="text" class="form-control" id="description" name="description"></textarea>
+                                    <textarea type="text" class="form-control" id="description" name="description" required></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -36,6 +35,13 @@
                                 </div>
                             </div>
                         </div>
+
+                        {{-- error validation --}}
+                        @foreach($errors->all() as $error)
+                        <p class="ml-1 h4" style="color: red">{{$error}}</p>
+                        @endforeach
+                        {{-- error validation --}}
+
                         <div class="border-top">
                             <div class="card-body">
                                 <button name="submit" type="submit" class="btn btn-primary">Submit</button>
@@ -66,14 +72,14 @@
                                         <td><img width="60px" src="{{asset($servicelist->image)}}"></td>
                                         <td>{{$servicelist->description}}</td>
                                         <td>
-                                            <button class="btn btn-primary" type="submit"><a href="">
+                                            <button class="btn btn-primary" type="submit"><a href="{{url('/admin/serviceEdit/')}}/{{$servicelist->id}}">
                                                     <i class="far fa-edit" style="color: white;"></i>
                                                 </a></button>
                                             <button class="btn btn-danger" type="submit"><a href="{{url('/serviceDelete/')}}/{{$servicelist->id}}" title="delete">
                                                 <i class="far fa-trash-alt" style="color: white;"></i>
                                             </a></button>
                                         </td>
-                                    </tr>
+                                    </tr> 
                                     @endforeach 
                                     </tbody>
                                     <tfoot>

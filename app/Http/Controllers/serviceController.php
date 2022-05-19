@@ -51,6 +51,12 @@ class serviceController extends Controller
           return redirect()->back()->with('alert', 'Product information was Deleted');
         }
 
+        // serviceEdit
+        function serviceEdit($id)
+        {
+          echo $id;
+        }
+
 
 // end
 }

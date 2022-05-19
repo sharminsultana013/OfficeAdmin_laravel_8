@@ -54,6 +54,10 @@ Route::get('/admin/service' , [serviceController::class, 'service'])->name('serv
 Route::post('admin/insert_service' , [serviceController::class, 'insert_service'])->name('insert_service');
 // delete service
 Route::get('/serviceDelete/{id}', [serviceController::class, 'serviceDelete'])->name('productDelete');
+// serviceEdit
+Route::get('/admin/serviceEdit/{id}', [serviceController::class, 'serviceEdit'])->name('serviceEdit');
+    // return view('admin.serviceEdit');
+
 
 
 // ============= client ===============
@@ -74,6 +78,16 @@ Route::get('/overviewDelete/{id}', [overviewController::class, 'overviewDelete']
 
 // ============ messageToClient =====================
 Route::get('/admin/message-to-client', [messageToClientController::class, 'messageToClient'])->name('messageToClient'); 
+// insert_message
+Route::post('/admin/insert_message', [messageToClientController::class, 'insert_message'])->name('insert_message');
+// messageDelete
+Route::get('/messageDelete/{id}', [messageToClientController::class, 'messageDelete'])->name('messageDelete');
+// message_edit
+// Route::get('/admin/message_edit/{id}', [messageToClientController::class, 'message_edit'])->name('message_edit');
+// Route::get('/admin/service-edit', function(){
+//     return view('admin.serviceEdit');
+// })->name('serviceEdit');
+
 
 
 

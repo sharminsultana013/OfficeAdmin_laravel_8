@@ -18,6 +18,8 @@ class aboutController extends Controller
     {
       $request->validate([
         'image' => 'required|mimes:jpg,jpeg,png,JPG,webp',
+        // 'title' => 'required',
+        // 'description' => 'required',
       ]);
 
      //image insert
@@ -33,7 +35,7 @@ class aboutController extends Controller
 
        //whole form insert in db
        $state = about::insert([
-        'image'=> $image_url,
+       'image'=> $image_url,
        'title'=>$request-> title,
        'description'=>$request-> description, 
      ]); 
