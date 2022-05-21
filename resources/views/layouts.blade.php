@@ -39,6 +39,7 @@
         <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 10%;">
           <ul class="navbar-nav">
             <li class="nav-item">
+              <a href=""></a>
               <a class="nav-link active menuItem" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">

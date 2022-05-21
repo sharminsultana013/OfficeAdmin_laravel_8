@@ -71,8 +71,6 @@
                                         <td>{{$productlist->title}}</td>
                                         <td><img width="60px" src="{{asset($productlist->image)}}"></td>
                                         <td>{{$productlist->description}}</td>
-                                        
-                                        
                                         <td>
                                             <button class="btn btn-primary" type="submit"><a href="">
                                                     <i class="far fa-edit" style="color: white;"></i>

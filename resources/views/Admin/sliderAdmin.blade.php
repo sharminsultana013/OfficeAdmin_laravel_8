@@ -13,8 +13,6 @@
                     <div class="card-body">
                         <h4 class="card-title">Add New image for The Slider</h4>
                         <div class="form-group row">
-                            {{-- <label for="lname"
-                                class="col-sm-3 text-end control-label col-form-label"></label> --}}
                             <div class="col-sm-9">
                                 <input type="file" class="form-control" id="image" name="image"/>
                             </div>

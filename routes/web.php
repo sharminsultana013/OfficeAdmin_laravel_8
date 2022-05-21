@@ -10,17 +10,20 @@ use App\Http\Controllers\serviceController;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\overviewController;
 use App\Http\Controllers\messageToClientController;
+use App\Http\Controllers\indexController;  //frontend controller
 
 
-//======= admin =======
+// ======= admin =======
 // index
 Route::get('/admin/dashboard', [homeController::class, 'dashboard'])->name('dashboard');
+
 
 // ================ slider ==================
 Route::get('/admin/slider', [sliderController::class, 'slider'])->name('sliderAdmin');
 // insert about
 Route::post('/admin/insert_slider', [sliderController::class, 'insert_slider'])->name('insert_slider');// delete slider 
 Route::get('/sliderDelete/{id}', [sliderController::class, 'sliderDelete'])->name('sliderDelete');
+
 
 // ============= about us ===================
 Route::get('/admin/about', [aboutController::class, 'about'])->name('aboutAdmin');
@@ -56,8 +59,6 @@ Route::post('admin/insert_service' , [serviceController::class, 'insert_service'
 Route::get('/serviceDelete/{id}', [serviceController::class, 'serviceDelete'])->name('productDelete');
 // serviceEdit
 Route::get('/admin/serviceEdit/{id}', [serviceController::class, 'serviceEdit'])->name('serviceEdit');
-    // return view('admin.serviceEdit');
-
 
 
 // ============= client ===============
@@ -82,13 +83,6 @@ Route::get('/admin/message-to-client', [messageToClientController::class, 'messa
 Route::post('/admin/insert_message', [messageToClientController::class, 'insert_message'])->name('insert_message');
 // messageDelete
 Route::get('/messageDelete/{id}', [messageToClientController::class, 'messageDelete'])->name('messageDelete');
-// message_edit
-// Route::get('/admin/message_edit/{id}', [messageToClientController::class, 'message_edit'])->name('message_edit');
-// Route::get('/admin/service-edit', function(){
-//     return view('admin.serviceEdit');
-// })->name('serviceEdit');
-
-
 
 
 // Messages From Clients
@@ -97,11 +91,11 @@ Route::get('/admin/message-from-client', function(){
 })->name('MessagesFromClients');
 
 
-
 // serviceEdit
 Route::get('/admin/service-edit', function(){
     return view('admin.serviceEdit');
 })->name('serviceEdit');
+
 
 // productEdit
 Route::get('/admin/product-edit', function(){
@@ -109,11 +103,12 @@ Route::get('/admin/product-edit', function(){
 })->name('productEdit');
 
 
-
 // overviewEdit
 Route::get('/admin/machine-overview-edit', function(){
     return view('admin.overviewEdit');
 })->name('overviewEdit');
+
+
 
 
 

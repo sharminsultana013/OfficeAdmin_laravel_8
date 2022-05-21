@@ -36,6 +36,7 @@
                         </div>
                     </div>
 
+                    
                     {{-- error validation --}}
                     @foreach($errors->all() as $error)
                         <p class="ml-1 h4" style="color: red">{{$error}}</p>

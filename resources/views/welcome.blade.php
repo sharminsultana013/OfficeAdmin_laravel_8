@@ -45,22 +45,6 @@
             <li class="nav-item">
               <a class="nav-link  menuItem" aria-current="page" href="#about">About Us</a>
             </li>
-            {{-- about us dropdown --}}
-            {{-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle menuItem" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                About Us
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="nav-link  menuItem" aria-current="page" href="#about">About Us</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="nav-link active menuItem" aria-current="page" href="{{route('overview')}}">Machine's
-                  Overview / Message</a></li>
-              </ul>
-            </li> --}}
-            {{-- end about dropdown --}}
             <li class="nav-item">
               <a class="nav-link  menuItem" aria-current="page" href="#products">Products</a>
             </li>
@@ -70,9 +54,6 @@
             <li class="nav-item">
               <a class="nav-link  menuItem" aria-current="page" href="#gallery">Gallery</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link  menuItem" aria-current="page" href="#slider">Our Team</a>
-            </li> -->
             <li class="nav-item">
               <a class="nav-link  menuItem" aria-current="page" href="#client">Our Clients</a>
             </li>
@@ -103,7 +84,11 @@
   </section>
   <!-- end navbar -->
 
+
+
   @yield('content')
+
+  
 
   <!-- footer -->
   <section id="footer"

@@ -30,7 +30,6 @@
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                
                                 <div class="accordion-body d-flex">
                                     <div class="col-lg-4 col-md-6">
                                         <a href="{{asset('frontend/1.jpeg')}}" target="blank">
@@ -42,7 +41,6 @@
                                         demonstrate the <code>.accordion -flush</code> class. This is the first item's
                                         accordion body.
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -65,7 +63,6 @@
                                         demonstrate the <code>.accordion -flush</code> class. This is the first item's
                                         accordion body.
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
