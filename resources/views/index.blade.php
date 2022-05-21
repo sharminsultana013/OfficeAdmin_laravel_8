@@ -17,16 +17,20 @@
       </div> 
 
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{{asset('frontend/slider/1.jpg')}}" class="d-block w-100" alt="...">
+        
+
+        @foreach($sliders as $slider)
+
+        <div class="carousel-item  {{$loop->iteration == 1 ? 'active' : ''}}">
+          <img src="{{asset($slider->image)}}" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item" style="height: 100%;">
-          <img src="{{asset('frontend/slider/2.jpg')}}" class="d-block w-100" alt="..." >
-        </div>
-        <div class="carousel-item" style="height: 100%;">
-          <img src="{{asset('frontend/slider/3.jpg')}}" class="d-block w-100" alt="..." >
-        </div>
+
+        @endforeach
+
+        
       </div>
+
+
       {{-- <div class="carousel-inner" style="height: 100vh;">
         <div class="carousel-item active" style="height: 100%;">
           <img src="{{asset('frontend/slider/6.jpg')}}" class="d-block w-100" alt="..." style="height: 100%;">
@@ -86,13 +90,16 @@
     <h1 class="aboutTitle text-center my-5"><span>O</span>ur <span>P</span>roducts</h1>
     <div class="container product">
       <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
+
+          @foreach($products as $product)
+
+
         <div class="col">
           <div class="card h-100 p-3">
-            <img src="{{asset('frontend/products/1.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
+            <img src="{{asset($product->image)}}" width="100%" height="320vh" class="card-img-top" alt="">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title">{{$product->title}}</h5>
+              <p class="card-text">{{$product->description}}</p>
             </div>
             <div class="card-footer">
               <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View
@@ -100,7 +107,11 @@
             </div>
           </div>
         </div>
-        <div class="col">
+
+          @endforeach
+
+
+        {{-- <div class="col">
           <div class="card h-100 p-3">
             <img src="{{asset('frontend/products/2.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
             <div class="card-body">
@@ -169,7 +180,7 @@
                 Details</button>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </section>
@@ -179,16 +190,23 @@
     <h1 class="aboutTitle text-center my-5"><span>O</span>ur <span>S</span>ervices</h1>
     <div class="service p-3">
       <div class="row row-cols-1 row-cols-md-2 g-3">
+
+          @foreach($services as $service)
+
+
         <div class="col">
           <div class="card h-100">
-            <img src="{{asset('frontend/service/1.jpg')}}" class="card-img-top serviceImg" alt="">
+            <img src="{{asset($service->image)}}" class="card-img-top serviceImg" alt="">
             <div class="serviceTextDiv">
-              <p class="serviceTitle">Service Name</p>
-              <p class="serviceText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti saepe maiores at
-                reprehenderit placeat quibusdam quisquam exercitationem ipsum dolorum molestiae.</p>
+              <p class="serviceTitle">{{$service->title}}</p>
+              <p class="serviceText">{{$service->description}}</p>
             </div>
           </div>
         </div>
+
+          @endforeach
+
+
         <div class="col">
           <div class="card h-100">
             <img src="{{asset('frontend/service/2.png')}}" class="card-img-top serviceImg" alt="...">
@@ -229,17 +247,25 @@
     <h1 class="aboutTitle text-center my-5"><span>G</span>ellary</h1>
     <div class="container gallery">
       <div class="row">
-        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-          <a href="{{asset('frontend/gallery/1.webp')}}" target="blank">
-            <img src="{{asset('frontend/gallery/1.webp')}}" class="w-100 shadow-1-strong rounded mb-4 gellaryImg" alt="..." />
+
+        @foreach($galleries as $gallery)
+
+        
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <a href="{{asset($gallery->image)}}" target="blank">
+            <img src="{{asset($gallery->image)}}" class="w-100 shadow-1-strong rounded mb-4 gellaryImg" alt="..." />
           </a>
 
-          <a href="{{asset('frontend/gallery/2.webp')}}" target="blank">
-            <img src="{{asset('frontend/gallery/2.webp')}}" class="w-100 shadow-1-strong rounded mb-4 gellaryImg" alt="..." />
-          </a>
+          {{-- <a href="{{asset($gallery->image)}}" target="blank">
+            <img src="{{asset($gallery->image)}}" class="w-100 shadow-1-strong rounded mb-4 gellaryImg" alt="..." />
+          </a> --}}
         </div>
 
-        <div class="col-lg-4 mb-4 mb-lg-0">
+        @endforeach
+
+
+
+        {{-- <div class="col-lg-4 mb-4 mb-lg-0">
           <a href="{{asset('frontend/gallery/3.webp')}}" target="blank">
             <img src="{{asset('frontend/gallery/3.webp')}}" class="w-100 shadow-1-strong rounded mb-4 gellaryImg" alt="..." />
           </a>
@@ -257,7 +283,7 @@
           <a href="{{asset('frontend/gallery/5.webp')}}" target="blank">
             <img src="{{asset('frontend/gallery/4.webp')}}" class="w-100 shadow-1-strong rounded mb-4 gellaryImg" alt="..." />
           </a>
-        </div>
+        </div> --}}
       </div>
     </div>
   </section>
@@ -269,16 +295,23 @@
     <!-- <h1 class="text-center" >sharmin sultana</h1> -->
     <div class="container client">
       <section class="client-logos slider ">
-        <div class="slide"><img src="{{asset('frontend/clients/1.webp')}}">
+
+        @foreach($clients as $client)
+
+        <div class="slide"><img src="{{asset($client->image)}}">
         </div>
-        <div class="slide"><img src="{{asset('frontend/clients/2.webp')}}"></div>
+
+        @endforeach
+
+
+        {{-- <div class="slide"><img src="{{asset('frontend/clients/2.webp')}}"></div>
         <div class="slide"><img src="{{asset('frontend/clients/3.webp')}}"></div>
         <div class="slide"><img src="{{asset('frontend/clients/4.webp/')}}">
-      </div>
+        </div>
         <div class="slide"><img src="{{asset('frontend/clients/5.webp')}}"></div>
         <div class="slide"><img src="{{asset('frontend/clients/6.webp')}}"></div>
         <div class="slide"><img src="{{asset('frontend/clients/7.webp')}}">
-        </div>
+        </div> --}}
       </section>
     </div>
   </section>

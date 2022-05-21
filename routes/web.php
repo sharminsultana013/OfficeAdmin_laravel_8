@@ -115,9 +115,10 @@ Route::get('/admin/machine-overview-edit', function(){
 
 
 // ======== frontend =========
-Route::get('/', function(){
-    return view('index');
-})->name('/');
+Route::get('/', [indexController::class, 'index'])->name('/'); 
+// Route::get('/', function(){
+//     return view('index');
+// })->name('/');
 Route::get('/about', function(){
     return view('about');
 })->name('about');
