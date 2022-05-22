@@ -61,7 +61,33 @@
   <section id="about" style="padding: 1% 5%;">
     <h1 class="aboutTitle text-center my-5"><span>A</span>bout <span>U</span>s</h1>
     <div class="container my-5">
-      <div class="row">
+      
+          
+          
+      @foreach($abouts as $about)
+
+
+      <div class="row my-3">
+          <div class="col-lg-6">
+              <div class="aboutPageText">
+                  <h1>{{$about->title}}</h1>
+                  <p class="my-4 mb-5">{{$about->description}}</p>
+              </div>
+              <a href="{{route('about')}}">
+                <button type="button" class="aboutBtn btn mb-5" style="border: 1px solid rgb(33, 6, 189)">Learn
+                  More</button>
+              </a>
+          </div>
+          <div class="col-lg-6">
+              <img class="aboutImg" src="{{asset($about->image)}}" alt="">
+          </div>
+      </div>
+
+      @endforeach
+
+
+      
+      {{-- <div class="row">
         <div class="col-lg-6">
           <div class="aboutText">
             <h1>Lorem Ipsum Dolor</h1>
@@ -80,7 +106,9 @@
         <div class="col-lg-6">
           <img class="aboutImg" src="{{asset('frontend/slider/9.jpg')}}" alt="">
         </div>
-      </div>
+      </div> --}}
+
+      
     </div>
   </section>
   <!-- end about -->

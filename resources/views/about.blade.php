@@ -167,22 +167,26 @@
     <!-- About -->
     <section id="about" style="padding: 1% 5%; z-index: 1; ">
         <div class="container my-5">
+            
+
+          @foreach($abouts as $about)
+
+
             <div class="row my-3">
                 <div class="col-lg-6">
                     <div class="aboutPageText">
-                        <h1>Lorem Ipsum Dolor</h1>
-                        <p class="my-4 mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum voluptates
-                            nesciunt saepe aut autem id architecto numquam iusto non deleniti vitae, nihil
-                            exercitationem dolores cum. Dolor ab sapiente recusandae possimus? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Rerum voluptates nesciunt saepe aut autem id architecto
-                            numquam iusto non deleniti vitae, nihil exercitationem dolores cum. Dolor ab sapiente
-                            recusandae possimus?</p>
+                        <h1>{{$about->title}}</h1>
+                        <p class="my-4 mb-5">{{$about->description}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img class="aboutImg" src="{{asset('frontend/about/3.jpg')}}" alt="">
+                    <img class="aboutImg" src="{{asset($about->image)}}" alt="">
                 </div>
             </div>
+
+            @endforeach
+  
+  
             <br>
             <div class="row my-3">
                 <div class="col-lg-6">
@@ -210,7 +214,27 @@
         <h1 class="contactTitle text-center p-5">Our Message</h1>
         <div id="carouselExampleControls " class="carousel slide mb-5" data-bs-ride="carousel">
             <div class="carousel-inner ">
-                <div class="carousel-item mt-5 active ">
+
+                {{-- messageToClients --}}
+
+                @foreach($messageToClients as $messageToClient)
+
+                    <div class="carousel-item  mt-5 {{$loop->iteration == 1 ? 'active' : ''}}">
+                        <div class="row speechBg d-flex align-items-center ">
+                            <div class="col-lg-12 p-5 sliders d-flex justify-content-center">
+                                <div class="sliderItem d-flex flex-column  align-items-center">
+                                    <img class="pb-4 pt-3 clientimage d-block w-10" src="{{asset($messageToClient->image)}}" alt="">
+                                    <p class="clientName">{{$messageToClient->name}}, <small>{{$messageToClient->designition}}</small></p>
+                                    <p class="text-center p-2 clientSpeech">{{$messageToClient->message}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                @endforeach
+
+                {{-- <div class="carousel-item mt-5 active ">
                     <div class="row speechBg d-flex align-items-center ">
                         <div class="col-lg-12 p-5 sliders d-flex justify-content-center">
                             <div class="sliderItem d-flex flex-column  align-items-center">
@@ -225,8 +249,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item mt-5">
+                </div> --}}
+                {{-- <div class="carousel-item mt-5">
                     <div class="row speechBg d-flex align-items-center">
                         <div class="col-lg-12 p-5 sliders d-flex justify-content-center">
                             <div class="sliderItem d-flex flex-column  align-items-center">
@@ -257,7 +281,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             
         </div>

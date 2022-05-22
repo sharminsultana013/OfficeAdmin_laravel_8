@@ -8,16 +8,18 @@ use App\Models\services;
 use App\Models\gallery;
 use App\Models\client;
 use App\Models\slider;
+use App\Models\about;
 
 class indexController extends Controller
 {
     function index(){
         // return view('index');
-        $products = product::all();
-        $services = services::all();
-        $galleries = gallery::all();
+        $products = product::latest()->take(6)->get();
+        $services = services::latest()->take(6)->get();
+        $galleries = gallery::latest()->take(6)->get();
         $clients = client::all();
-        $sliders = slider::all();
-        return view('index',compact('products' , 'services' , 'galleries' , 'clients' , 'sliders'));
+        $sliders = slider::latest()->take(3)->get();
+        $abouts = about::latest()->take(1)->get();
+        return view('index',compact('products' , 'services' , 'galleries' , 'clients' , 'sliders' , 'abouts'));
     }
 } 

@@ -10,7 +10,9 @@ use App\Http\Controllers\serviceController;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\overviewController;
 use App\Http\Controllers\messageToClientController;
-use App\Http\Controllers\indexController;  //frontend controller
+//frontend controller
+use App\Http\Controllers\indexController;  
+use App\Http\Controllers\aboutFrontendController;  
 
 
 // ======= admin =======
@@ -119,9 +121,12 @@ Route::get('/', [indexController::class, 'index'])->name('/');
 // Route::get('/', function(){
 //     return view('index');
 // })->name('/');
-Route::get('/about', function(){
-    return view('about');
-})->name('about');
+
+// aboutFrontendController
+Route::get('/about', [aboutFrontendController::class, 'about'])->name('about');
+// Route::get('/about', function(){
+//     return view('about');
+// })->name('about');
 Route::get('/overview', function(){
     return view('overview');
 })->name('overview');
