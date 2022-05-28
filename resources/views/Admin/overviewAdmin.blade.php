@@ -74,9 +74,9 @@
                                         <td><img width="60px" src="{{asset($overviewlist->image)}}"></td>
                                         <td>{{$overviewlist->description}}</td>
                                         <td>
-                                            <button class="btn btn-primary" type="submit"><a href="">
+                                            {{-- <button class="btn btn-primary" type="submit"><a href="">
                                                     <i class="far fa-edit" style="color: white;"></i>
-                                                </a></button>
+                                                </a></button> --}}
                                             <button class="btn btn-danger" type="submit"><a href="{{url('/overviewDelete/')}}/{{$overviewlist->id}}" title="delete">
                                                 <i class="far fa-trash-alt" style="color: white;"></i>
                                             </a></button>

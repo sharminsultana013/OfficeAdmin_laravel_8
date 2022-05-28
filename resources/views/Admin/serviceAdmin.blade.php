@@ -72,9 +72,9 @@
                                         <td><img width="60px" src="{{asset($servicelist->image)}}"></td>
                                         <td>{{$servicelist->description}}</td>
                                         <td>
-                                            <button class="btn btn-primary" type="submit"><a href="{{url('/admin/serviceEdit/')}}/{{$servicelist->id}}">
+                                            {{-- <button class="btn btn-primary" type="submit"><a href="{{url('/admin/serviceEdit/')}}/{{$servicelist->id}}">
                                                     <i class="far fa-edit" style="color: white;"></i>
-                                                </a></button>
+                                                </a></button> --}}
                                             <button class="btn btn-danger" type="submit"><a href="{{url('/serviceDelete/')}}/{{$servicelist->id}}" title="delete">
                                                 <i class="far fa-trash-alt" style="color: white;"></i>
                                             </a></button>

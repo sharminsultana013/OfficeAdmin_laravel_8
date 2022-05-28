@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('message_to_clients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('designition');
+            $table->longText('designition');
             $table->string('message');
             $table->string('image');
-            $table->timestamps();
+            $table->timestamp('created_at');
         });
     }
 

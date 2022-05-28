@@ -1,12 +1,10 @@
 {{-- @extends('welcome')
 @section('content')
-
 <style>
     body{
     overflow-x: hidden;
     background-image: linear-gradient(to bottom right,  rgb(247, 107, 205), rgb(243, 243, 137));
     }
-
 .aboutPageTitle{
     z-index: 1;
     margin-top: 20%;
@@ -16,29 +14,20 @@
     color: white;
     text-shadow: 2px 2px 5px #1f2274;
 }
-
 .aboutPageText{
     text-align: justify;
     padding: 5%;
 }
-
 .aboutPageText h1{
     font-size: 2em;
     font-weight: bold;
     font-family: 'Lora', serif;
 }
-
 #about{
     background-color: white;
     margin-top: 18%;
 }
-
-
 </style>
-
-
-
-    
 @endsection --}}
 
 <!DOCTYPE html>
@@ -91,9 +80,9 @@
             background-color: white;
             margin-top: 18%;
         }
-        
-        
+
         </style>
+        
 
       </head>
 
@@ -126,9 +115,9 @@
                             <a class="nav-link active menuItem" aria-current="page" href="{{route('overview')}}">Company
                                 Overview</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link  menuItem" aria-current="page" href="#contact">Contact Us</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle menuItem" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -183,27 +172,22 @@
                     <img class="aboutImg" src="{{asset($about->image)}}" alt="">
                 </div>
             </div>
-
+<br>
             @endforeach
   
   
-            <br>
-            <div class="row my-3">
+            
+            {{-- <div class="row my-3">
                 <div class="col-lg-6">
                     <img class="aboutImg" src="{{asset('frontend/about/4.jpg')}}" alt="">
                 </div>
                 <div class="col-lg-6">
                     <div class="aboutPageText">
                         <h1>Lorem Ipsum Dolor</h1>
-                        <p class="my-4 mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum voluptates
-                            nesciunt saepe aut autem id architecto numquam iusto non deleniti vitae, nihil
-                            exercitationem dolores cum. Dolor ab sapiente recusandae possimus? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Rerum voluptates nesciunt saepe aut autem id architecto
-                            numquam iusto non deleniti vitae, nihil exercitationem dolores cum. Dolor ab sapiente
-                            recusandae possimus?</p>
+                        <p class="my-4 mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum voluptates nesciunt saepe aut autem id architecto numquam iusto non deleniti vitae, nihil exercitationem dolores cum. Dolor ab sapiente recusandae possimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum voluptates nesciunt saepe aut autem id architecto numquam iusto non deleniti vitae, nihil exercitationem dolores cum. Dolor ab sapiente recusandae possimus?</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <!-- end about -->
@@ -211,7 +195,7 @@
     <!-- speech -->
     <!-- caurosel -->
     <section id="slider" class="container">
-        <h1 class="contactTitle text-center p-5">Our Message</h1>
+        <h1 class="overviewTitle text-center p-5">Our Message</h1>
         <div id="carouselExampleControls " class="carousel slide mb-5" data-bs-ride="carousel">
             <div class="carousel-inner ">
 
@@ -240,11 +224,7 @@
                             <div class="sliderItem d-flex flex-column  align-items-center">
                                 <img class="pb-4 pt-3 clientimage d-block w-10" src="{{asset('frontend/people/1.jpg')}}" alt="">
                                 <p class="clientName">Name of The Person, <small>Designation</small></p>
-                                <p class="text-center p-2 clientSpeech">the best headphone in the world for people who
-                                    just want to
-                                    waste time in front. the best headphone in the world for people who just want to
-                                    waste time in front.
-                                    the best headphone in the world for people who just want to waste time in front.
+                                <p class="text-center p-2 clientSpeech">the best headphone in the world for people who just want to waste time in front. the best headphone in the world for people who just want to waste time in front. the best headphone in the world for people who just want to waste time in front.
                                 </p>
                             </div>
                         </div>
@@ -256,11 +236,7 @@
                             <div class="sliderItem d-flex flex-column  align-items-center">
                                 <img class="pb-4 pt-3 clientimage d-block w-10" src="{{asset('frontend/people/1.jpg')}}" alt="">
                                 <p class="clientName">Name of The Person, <small>Designation</small></p>
-                                <p class="text-center p-2 clientSpeech">the best headphone in the world for people who
-                                    just want to
-                                    waste time in front. the best headphone in the world for people who just want to
-                                    waste time in front.
-                                    the best headphone in the world for people who just want to waste time in front.
+                                <p class="text-center p-2 clientSpeech">the best headphone in the world for people who just want to waste time in front. the best headphone in the world for people who just want to waste time in front. the best headphone in the world for people who just want to waste time in front.
                                 </p>
                             </div>
                         </div>
@@ -272,11 +248,7 @@
                             <div class="sliderItem d-flex flex-column  align-items-center">
                                 <img class="pb-4 pt-3 clientimage d-block w-10" src="{{asset('frontend/people/1.jpg')}}" alt="">
                                 <p class="clientName">Name of The Person, <small>Designation</small></p>
-                                <p class="text-center p-2 clientSpeech">the best headphone in the world for people who
-                                    just want to
-                                    waste time in front. the best headphone in the world for people who just want to
-                                    waste time in front.
-                                    the best headphone in the world for people who just want to waste time in front.
+                                <p class="text-center p-2 clientSpeech">the best headphone in the world for people who just want to waste time in front. the best headphone in the world for people who just want to waste time in front. the best headphone in the world for people who just want to waste time in front.
                                 </p>
                             </div>
                         </div>
@@ -289,7 +261,7 @@
     <!-- end speech -->
 
     <!-- contact us -->
-    <section id="contact" class="my-5" style="position: relative;">
+    {{-- <section id="contact" class="my-5" style="position: relative;">
         <h1 class="contactTitle text-center p-5">Contact Us</h1>
         <div class="container contact p-3">
             <!--Section: Contact v.2-->
@@ -373,7 +345,7 @@
             </section>
             <!--Section: Contact v.2-->
         </div>
-    </section>
+    </section> --}}
     <!-- end contact us -->
 
     <!-- footer -->

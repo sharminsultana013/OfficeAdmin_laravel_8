@@ -74,9 +74,6 @@
                                         <td><img width="60px" src="{{asset($aboutlist->image)}}"></td>
                                         
                                         <td>
-                                            <button class="btn btn-primary" type="submit"><a href="">
-                                                    <i class="far fa-edit" style="color: white;"></i>
-                                                </a></button>
                                             <button class="btn btn-danger" type="submit"><a href="{{url('/aboutDelete/')}}/{{$aboutlist->id}}" title="delete">
                                                 <i class="far fa-trash-alt" style="color: white;"></i>
                                             </a></button>

@@ -67,7 +67,12 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="{{route('sliderAdmin')}}" aria-expanded="false"><i class="fas fa-image"></i><span
                                     class="hide-menu">Carousel Images</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+
+                        <li class="sidebar-item"><a href="{{route('aboutAdmin')}}" class="sidebar-link"><i
+                            class="mdi mdi-note-outline"></i><span class="hide-menu">About Us
+                        </span></a></li>
+
+                        {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
                                     class="hide-menu">About </span></a>
                             <ul aria-expanded="false" class="collapse first-level">
@@ -78,9 +83,14 @@
                                             class="mdi mdi-note-plus"></i><span class="hide-menu"> Update About
                                         </span></a></li>
                             </ul>
+                        </li> --}}
+
+                        <li class="sidebar-item"><a href="{{route('productAdmin')}}" class="sidebar-link"><i
+                            class="mdi mdi-all-inclusive"></i><span class="hide-menu">Our
+                            Products </span></a>
                         </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                        {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
                                     class="hide-menu">Our Products </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
@@ -92,8 +102,12 @@
                                             class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Update Products
                                         </span></a></li>
                             </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                        </li> --}}
+                        <li class="sidebar-item"><a href="{{route('serviceAdmin')}}" class="sidebar-link"><i
+                            class="fas fa-list-alt"></i><span class="hide-menu">Our 
+                            Services
+                        </span></a></li>
+                        {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="fas fa-list-ol"></i><span
                                     class="hide-menu">Our Services </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
@@ -101,18 +115,22 @@
                                             class="fas fa-list-alt"></i><span class="hide-menu"> Add/Manage
                                             Services
                                         </span></a></li>
-                                {{-- <li class="sidebar-item"><a href="{{route('serviceEdit')}}" class="sidebar-link"><i
+                                <li class="sidebar-item"><a href="{{route('serviceEdit')}}" class="sidebar-link"><i
                                             class="fas fa-list-alt"></i><span class="hide-menu"> Update Services
-                                        </span></a></li> --}}
+                                        </span></a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="{{route('galleryAdmin')}}" aria-expanded="false"><i class="fas fa-image"></i><span
                                     class="hide-menu">Gallery</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="{{route('clientAdmin')}}" aria-expanded="false"><i class="fas fa-users"></i><span
                                     class="hide-menu">Our Clients</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                        <li class="sidebar-item"><a href="{{route('overviewAdmin')}}" class="sidebar-link"><i
+                            class="mdi mdi-alert-octagon"></i><span class="hide-menu">
+                                Machine Overview
+                        </span></a></li>
+                        {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
                                     class="hide-menu">Machine Overview</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
@@ -125,9 +143,18 @@
                                             Overview
                                         </span></a></li>
                             </ul>
+                        </li> --}}
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{{route('messageToClient')}}" aria-expanded="false"><i class="fas fa-image"></i><span
+                                href="{{route('messageToClient')}}" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
                                     class="hide-menu">Messages For Clients</span></a></li>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="{{route('MessagesFromClients')}}" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
+                                    class="hide-menu">Messages From Clients</span></a></li>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="{{route('address')}}" aria-expanded="false"><i class="fas fa-list-alt"></i><span
+                                    class="hide-menu">Address</span></a></li>
                         </li>
                     </ul>
                 </nav>

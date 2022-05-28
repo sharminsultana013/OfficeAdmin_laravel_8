@@ -124,13 +124,13 @@
 
         <div class="col">
           <div class="card h-100 p-3">
-            <img src="{{asset($product->image)}}" width="100%" height="320vh" class="card-img-top" alt="">
+            <img src="{{asset($product->image)}}" width="100%"  class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{$product->title}}</h5>
               <p class="card-text">{{$product->description}}</p>
             </div>
             <div class="card-footer">
-              <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View
+              <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal-{{$product->id}}" type="button">View
                 Details</button>
             </div>
           </div>
@@ -144,62 +144,6 @@
             <img src="{{asset('frontend/products/2.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title" style="font-family: 'Lora', serif;">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-              <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View
-                Details</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 p-3">
-            <img src="{{asset('frontend/products/3.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-              <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View
-                Details</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 p-3">
-            <img src="{{asset('frontend/products/4.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-              <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View
-                Details</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 p-3">
-            <img src="{{asset('frontend/products/5.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-              <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View
-                Details</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 p-3">
-            <img src="{{asset('frontend/products/6.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                 content. This content is a little bit longer.</p>
             </div>
@@ -235,36 +179,7 @@
           @endforeach
 
 
-        <div class="col">
-          <div class="card h-100">
-            <img src="{{asset('frontend/service/2.png')}}" class="card-img-top serviceImg" alt="...">
-            <div class="serviceTextDiv">
-              <p class="serviceTitle">Service Name</p>
-              <p class="serviceText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti saepe maiores at
-                reprehenderit placeat quibusdam quisquam exercitationem ipsum dolorum molestiae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="{{asset('frontend/service/3.jpg')}}" class="card-img-top serviceImg" alt="">
-            <div class="serviceTextDiv">
-              <p class="serviceTitle">Service Name</p>
-              <p class="serviceText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti saepe maiores at
-                reprehenderit placeat quibusdam quisquam exercitationem ipsum dolorum molestiae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="{{asset('frontend/service/4.jpg')}}" class="card-img-top serviceImg" alt="">
-            <div class="serviceTextDiv">
-              <p class="serviceTitle">Service Name</p>
-              <p class="serviceText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti saepe maiores at
-                reprehenderit placeat quibusdam quisquam exercitationem ipsum dolorum molestiae.</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -356,14 +271,15 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form action="{{route('insert_contact')}}" method="post" class="form-horizontal" class="dropzone" enctype="multipart/form-data">
+              @csrf
 
               <!--Grid row-->
               <div class="row">
                 <!--Grid column-->
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="name" class="form-control" id="floatingInput" placeholder="Name">
+                    <input type="name" class="form-control" name="name" id="floatingInput" placeholder="Name" required>
                     <label class="contactText" for="floatingInput">Name</label>
                   </div>
                 </div>
@@ -372,7 +288,7 @@
                 <!--Grid column-->
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Email Address">
+                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="Email Address" required>
                     <label class="contactText" for="floatingInput">Email address</label>
                   </div>
                 </div>
@@ -384,7 +300,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-floating mb-3">
-                    <input type="subject" class="form-control" id="floatingInput" placeholder="Subject">
+                    <input type="subject"  class="form-control" name="subject" id="floatingInput" placeholder="Subject" required>
                     <label class="contactText" for="floatingInput">Subject</label>
                   </div>
                 </div>
@@ -396,14 +312,14 @@
                 <!--Grid column-->
                 <div class="col-md-12">
                   <div class="form-floating mb-3">
-                    <input type="message" class="form-control" id="floatingInput" placeholder="Your Message">
+                    <input type="message" class="form-control" name="message" id="floatingInput" placeholder="Your Message" required>
                     <label class="contactText" for="floatingInput">Your Message</label>
                   </div>
                 </div>
               </div>
               <!--Grid row-->
               <div class="text-md-left">
-                <a class="btn contactBtn" type="submit">Send</a>
+                <button name="submit" type="submit" class="aboutBtn btn mb-5" style="border: 1px solid rgb(33, 6, 189)">Submit</button>
               </div>
           </div>
           </form>
@@ -411,17 +327,26 @@
 
           <!--Grid column-->
           <div class="col-md-3 text-center">
+            
+            @foreach($address as $addr)
+
+
             <ul class="list-unstyled mb-0">
               <li class="contactList"><i class="fas fa-map-marker-alt fa-2x contactIcon"></i>
-                <p>Shimultola, Ashulia, Dhaka, Bangladesh</p>
+                <p>{{$addr->address}}</p>
               </li>
               <li class="contactList"><i class="fas fa-phone mt-4 fa-2x contactIcon"></i>
-                <p>+ 01 234 567 89</p>
+                <p>{{$addr->mobile}}</p>
               </li>
               <li class="contactList"><i class="fas fa-envelope mt-4 fa-2x contactIcon"></i>
-                <p>abc@gmail.com</p>
+                <p>{{$addr->email}}</p>
               </li>
             </ul>
+
+            
+            @endforeach
+ 
+
           </div>
           <!--Grid column-->
         </div>
@@ -431,26 +356,27 @@
   </section>
   <!-- end contact us -->
 
-  <!-- modal -->
-  <!-- Modal -->
-  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content modalBody">
-        <div class="modal-header">
-          <h5 class="modal-title " id="exampleModalLabel">Card title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body ">
-          <img src="{{asset('frontend/products/6.jpg')}}" width="100%" height="320vh" class="card-img-top" alt="">
-          <p class="modalText">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer. This is a wider card with supporting text below as a natural
-            lead-in to additional
-            content. This content is a little bit longer. This is a wider card with supporting text below as a natural
-            lead-in to additional
-            content. This content is a little bit longer.</p>
-        </div>
+
+  {{-- modal --}}
+  @foreach($productList as $product)
+
+  <div class="modal fade " id="exampleModal-{{$product->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+  <div class="modal-dialog">
+    <div class="modal-content modalBody">
+      <div class="modal-header">
+        <h5 class="modal-title " id="exampleModalLabel">{{$product->title}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <img src="{{asset($product->image)}}" width="100%" height="320vh" class="card-img-top" alt="">
+        <p class="modalText">{{$product->description}}</p>
       </div>
     </div>
   </div>
+</div> 
+{{-- end modal --}}
+
+@endforeach
 
 @endsection

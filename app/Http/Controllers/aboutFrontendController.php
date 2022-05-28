@@ -11,7 +11,7 @@ class aboutFrontendController extends Controller
     function about() {
         // return view('about');
         // $abouts = about::latest()->take(1)->get();
-        $abouts = about::all();
+        $abouts = about::latest()->take(6)->get();
         $messageToClients = messageToClients::all();
         return view('about',compact('abouts' , 'messageToClients'));
     }

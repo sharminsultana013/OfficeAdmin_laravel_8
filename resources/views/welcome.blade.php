@@ -58,7 +58,7 @@
               <a class="nav-link  menuItem" aria-current="page" href="#client">Our Clients</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active menuItem" aria-current="page" href="{{route('overview')}}">Machine
+                <a class="nav-link active menuItem" aria-current="page" href="{{route('overview')}}">Company
                     Overview</a>
             </li>
             <li class="nav-item">
@@ -70,11 +70,11 @@
                 Our Profiles
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item menuItem" href="https://drive.google.com/u/0/uc?id=1t6AmQA-YZKk9RbE8ACfwP_-K-92mFWub&export=download">Unitech Label</a></li>
+                <li><a class="dropdown-item menuItem" target="blank" href="https://drive.google.com/file/d/1dJqNJEWI0q85sOgzldg_o_RJPhuieiNL/view?usp=sharing">Unitech Label</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item menuItem" href="https://drive.google.com/u/0/uc?id=15uD5bFOU2gyV5F-UCVDdZQNIp3T88IWn&export=download">Unitek Trims</a></li>
+                <li><a class="dropdown-item menuItem" target="blank" href="https://drive.google.com/file/d/1QWtdppMyJx5rcTvas20vzB0l3o3piB0V/view?usp=sharing">Unitek Trims</a></li>
               </ul>
             </li>
           </ul>

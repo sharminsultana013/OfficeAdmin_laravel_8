@@ -7,7 +7,7 @@ use App\Models\about;
 
 class aboutController extends Controller
 {
-    function about() {
+    function about() { 
         // return view('admin.about');
         $aboutlists = about::all();
     	return view('admin.about',compact('aboutlists')); 

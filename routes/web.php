@@ -10,9 +10,12 @@ use App\Http\Controllers\serviceController;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\overviewController;
 use App\Http\Controllers\messageToClientController;
+use App\Http\Controllers\addressController;
 //frontend controller
 use App\Http\Controllers\indexController;  
 use App\Http\Controllers\aboutFrontendController;  
+use App\Http\Controllers\overviewFrontendController;  
+use App\Http\Controllers\messageFromClientController;  
 
 
 // ======= admin =======
@@ -87,10 +90,22 @@ Route::post('/admin/insert_message', [messageToClientController::class, 'insert_
 Route::get('/messageDelete/{id}', [messageToClientController::class, 'messageDelete'])->name('messageDelete');
 
 
-// Messages From Clients
-Route::get('/admin/message-from-client', function(){
-    return view('admin.MessagesFromClients');
-})->name('MessagesFromClients');
+// ============== Messages From Clients =============
+
+// messageFromClientController
+Route::get('/admin/message-from-client', [messageFromClientController::class, 'MessagesFromClients'])->name('MessagesFromClients');
+
+// ================== address =============
+Route::get('/admin/address', [addressController::class, 'address'])->name('address');
+// insert_address
+Route::post('/admin/insert_address', [addressController::class, 'insert_address'])->name('insert_address');
+// addressDelete
+Route::get('/addressDelete/{id}', [addressController::class, 'addressDelete'])->name('addressDelete');
+
+
+// Route::get('/admin/message-from-client', function(){
+//     return view('admin.MessagesFromClients');
+// })->name('MessagesFromClients');
 
 
 // serviceEdit
@@ -127,6 +142,15 @@ Route::get('/about', [aboutFrontendController::class, 'about'])->name('about');
 // Route::get('/about', function(){
 //     return view('about');
 // })->name('about');
-Route::get('/overview', function(){
-    return view('overview');
-})->name('overview');
+
+// overviewFrontendController
+Route::get('/overview', [overviewFrontendController::class, 'overview'])->name('overview');
+// Route::get('/overview', function(){
+//     return view('overview');
+// })->name('overview');
+
+// contact
+// insert_contact
+Route::post('/insert_contact', [messageFromClientController::class, 'insert_contact'])->name('insert_contact');
+// userMessageDelete
+Route::get('/userMessageDelete/{id}', [messageFromClientController::class, 'userMessageDelete'])->name('userMessageDelete');
