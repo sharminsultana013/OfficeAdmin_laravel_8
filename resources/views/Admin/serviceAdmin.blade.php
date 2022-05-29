@@ -17,7 +17,7 @@
                                     class="col-sm-3 text-end control-label col-form-label">Title</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="title" name="title"
-                                        placeholder="About Title here" required>
+                                        placeholder="Service Title here" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -72,9 +72,6 @@
                                         <td><img width="60px" src="{{asset($servicelist->image)}}"></td>
                                         <td>{{$servicelist->description}}</td>
                                         <td>
-                                            {{-- <button class="btn btn-primary" type="submit"><a href="{{url('/admin/serviceEdit/')}}/{{$servicelist->id}}">
-                                                    <i class="far fa-edit" style="color: white;"></i>
-                                                </a></button> --}}
                                             <button class="btn btn-danger" type="submit"><a href="{{url('/serviceDelete/')}}/{{$servicelist->id}}" title="delete">
                                                 <i class="far fa-trash-alt" style="color: white;"></i>
                                             </a></button>

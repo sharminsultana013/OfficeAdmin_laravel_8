@@ -85,8 +85,8 @@
                                     <tr>
                                         <th>Id</th>
                                         <th>Title</th>
-                                        <th>Image</th>
                                         <th>Description</th>
+                                        <th>Image</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>

@@ -17,7 +17,7 @@
                                 class="col-sm-3 text-end control-label col-form-label">Title</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="title" name="title"
-                                    placeholder="About Title here" required>
+                                    placeholder="Product Title here" required>
                             </div>
                         </div>
                         <div class="form-group row">
