@@ -71,7 +71,7 @@
           <div class="col-lg-6">
               <div class="aboutPageText">
                   <h1>{{$about->title}}</h1>
-                  <p class="my-4 mb-5">{{$about->description}}</p>
+                  <p class="my-4 mb-5" style="text-align: justify">{{$about->description}}</p>
               </div>
               <a href="{{route('about')}}">
                 <button type="button" class="aboutBtn btn mb-5" style="border: 1px solid rgb(33, 6, 189)">Learn

@@ -17,7 +17,7 @@ class galleryController extends Controller
     function insert_image(Request $request)
     {
       $request->validate([
-        'image' => 'required|mimes:jpg,jpeg,png,JPG,webp',
+        'image' => 'required|mimes:jpg,jpeg,png,JPG,webp,gif',
       ],
       [
           'image.required' => 'Choose jpg/jpeg/png/JPG/webp file!'

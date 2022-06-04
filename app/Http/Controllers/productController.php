@@ -17,7 +17,7 @@ class productController extends Controller
     function insert_product(Request $request){
         
       $request->validate([
-        'image' => 'required|mimes:jpg,jpeg,png,JPG',
+        'image' => 'required|mimes:jpg,jpeg,png,JPG,gif',
       ]);
 
      //image insert

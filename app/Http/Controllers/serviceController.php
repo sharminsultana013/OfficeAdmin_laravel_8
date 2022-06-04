@@ -17,7 +17,7 @@ class serviceController extends Controller
     function insert_service(Request $request){
         
         $request->validate([
-          'image' => 'required|mimes:jpg,jpeg,png,JPG,webp',
+          'image' => 'required|mimes:jpg,jpeg,png,JPG,webp,gif',
         ]);
   
        //image insert

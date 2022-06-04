@@ -165,7 +165,7 @@
                 <div class="col-lg-6">
                     <div class="aboutPageText">
                         <h1>{{$about->title}}</h1>
-                        <p class="my-4 mb-5">{{$about->description}}</p>
+                        <p class="my-4 mb-5 text-justify">{{$about->description}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6">

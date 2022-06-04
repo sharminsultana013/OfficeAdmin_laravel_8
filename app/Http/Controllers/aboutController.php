@@ -17,7 +17,7 @@ class aboutController extends Controller
     function insert_about(Request $request) 
     {
       $request->validate([
-        'image' => 'required|mimes:jpg,jpeg,png,JPG,webp',
+        'image' => 'required|mimes:jpg,jpeg,png,JPG,webp,gif',
         // 'title' => 'required',
         // 'description' => 'required',
       ]);
