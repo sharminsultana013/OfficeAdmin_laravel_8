@@ -127,7 +127,7 @@
             <img src="{{asset($product->image)}}" width="100%"  class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{$product->title}}</h5>
-              <p class="card-text">{{$product->description}}</p>
+              <p class="card-text" style="text-align: justify">{{$product->description}}</p>
             </div>
             <div class="card-footer">
               <button class="btn productBtn" data-bs-toggle="modal" data-bs-target="#exampleModal-{{$product->id}}" type="button">View

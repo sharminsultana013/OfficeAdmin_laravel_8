@@ -17,10 +17,10 @@ class indexController extends Controller
     function index(){
         // return view('index');
         $products = product::latest()->take(6)->get();
-        $productList = product::all();
+        $productList = product::latest()->take(6)->get();
         $services = services::latest()->take(6)->get();
         $galleries = gallery::latest()->take(6)->get();
-        $clients = client::all();
+        $clients = client::latest()->take(10)->get();
         $sliders = slider::latest()->take(3)->get();
         $abouts = about::latest()->take(1)->get();
         $address = address::latest()->take(1)->get();
