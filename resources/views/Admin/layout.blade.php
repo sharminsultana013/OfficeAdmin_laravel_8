@@ -128,7 +128,7 @@
                                     class="hide-menu">Our Clients</span></a></li>
                         <li class="sidebar-item"><a href="{{route('overviewAdmin')}}" class="sidebar-link"><i
                             class="mdi mdi-alert-octagon"></i><span class="hide-menu">
-                                Machine Overview
+                                Company Overview
                         </span></a></li>
                         {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span

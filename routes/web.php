@@ -103,27 +103,22 @@ Route::post('/admin/insert_address', [addressController::class, 'insert_address'
 Route::get('/addressDelete/{id}', [addressController::class, 'addressDelete'])->name('addressDelete');
 
 
-// Route::get('/admin/message-from-client', function(){
-//     return view('admin.MessagesFromClients');
-// })->name('MessagesFromClients');
+// // serviceEdit
+// Route::get('/admin/service-edit', function(){
+//     return view('admin.serviceEdit');
+// })->name('serviceEdit');
 
 
-// serviceEdit
-Route::get('/admin/service-edit', function(){
-    return view('admin.serviceEdit');
-})->name('serviceEdit');
+// // productEdit
+// Route::get('/admin/product-edit', function(){
+//     return view('admin.productEdit');
+// })->name('productEdit');
 
 
-// productEdit
-Route::get('/admin/product-edit', function(){
-    return view('admin.productEdit');
-})->name('productEdit');
-
-
-// overviewEdit
-Route::get('/admin/machine-overview-edit', function(){
-    return view('admin.overviewEdit');
-})->name('overviewEdit');
+// // overviewEdit
+// Route::get('/admin/machine-overview-edit', function(){
+//     return view('admin.overviewEdit');
+// })->name('overviewEdit');
 
 
 
