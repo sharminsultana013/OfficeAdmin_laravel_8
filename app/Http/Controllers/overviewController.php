@@ -41,7 +41,7 @@ class overviewController extends Controller
        ]); 
    
       //  return back();
-      return redirect()->back()->with('alert', 'Machine information was Added');
+      return redirect()->back()->with('alert', 'Company information was Added');
       }
 
     // overviewDelete
@@ -49,7 +49,7 @@ class overviewController extends Controller
     {
     	overview::findOrFail($id)->delete();
     	// return back();
-      return redirect()->back()->with('alert', 'Machine information was Deleted');
+      return redirect()->back()->with('alert', 'Company information was Deleted');
     }
 
 
